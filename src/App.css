@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -26,6 +26,18 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.square-winner { 
+  float: left;
+  font-size: 24px;
+  font-weight: bolder;  
+  margin-top: -2px;  
+}
+
+.square-winner{
+  background: rgb(230, 227, 235);
+  text-decoration:dotted
 }
 
 @keyframes App-logo-spin {

@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ToolBar from "./components/ToolBar";
+import ThemeContext from "./BgColorContext";
 
-function App() {
+const App = () => {
+  const [bgColor, setBgColor] = useState("light");
+  
+  const contextValue = {
+    bgColor: bgColor,
+    updateBgColor: setBgColor,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={contextValue}>
+      <div className={bgColor}>
+        <ToolBar />
+        <p>Theme utilisé : {bgColor}</p>
+      </div>
+    </ThemeContext.Provider>
   );
-}
+};
 
 export default App;
