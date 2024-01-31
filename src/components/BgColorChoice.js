@@ -1,9 +1,8 @@
-// Composant en fin de chaine
-
 import { useContext } from "react";
 import BgContext from "../BgColorContext";
 
-// Il reçoit dans ses props le thème et la fonction qui permet de le changer
+
+// it get the bgColor and function to change it by Context
 export function BgColorChoice() {
   const { bgColor, updateBgColor } = useContext(BgContext);
 

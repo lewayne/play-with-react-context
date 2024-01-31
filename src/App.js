@@ -4,7 +4,7 @@ import ThemeContext from "./BgColorContext";
 
 const App = () => {
   const [bgColor, setBgColor] = useState("light");
-  
+
   const contextValue = {
     bgColor: bgColor,
     updateBgColor: setBgColor,
@@ -14,7 +14,7 @@ const App = () => {
     <ThemeContext.Provider value={contextValue}>
       <div className={bgColor}>
         <ToolBar />
-        <p>Theme utilisé : {bgColor}</p>
+        <p>Backgound Color used is : {bgColor}</p>
       </div>
     </ThemeContext.Provider>
   );
